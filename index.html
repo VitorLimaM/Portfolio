@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vitor Lima - Portfólio Pessoal</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/js/all.min.js"></script>
+    <style>
+        .hero-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .fade-in-up { animation: fadeInUp 0.6s ease-out; }
+        .project-card:hover {
+            transform: translateY(-5px);
+            transition: transform 0.3s ease;
+        }
+        .skill-bar {
+            width: 0;
+            transition: width 1s ease-out;
+        }
+        .skill-bar.animate { width: var(--width); }
+        .contact-icon:hover {
+            color: #667eea;
+            transition: color 0.3s ease;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+    <header class="hero-bg text-white py-4 sticky top-0 z-10">
+        <div class="container mx-auto px-4">
+            <nav class="flex justify-between items-center">
+                <h1 class="text-2xl font-bold">Vitor Lima</h1>
+                <ul class="flex space-x-6">
+                    <li><a href="#about" class="hover:text-yellow-400 transition-colors">About</a></li>
+                    <li><a href="#skills" class="hover:text-yellow-400 transition-colors">Skills</a></li>
+                    <li><a href="#projects" class="hover:text-yellow-400 transition-colors">Projects</a></li>
+                    <li><a href="#contact" class="hover:text-yellow-400 transition-colors">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <section id="about" class="hero-bg text-white py-20">
+        <div class="container mx-auto px-4 text-center">
+            <img src="C:\Users\vitor\Desktop\Projetos\Custumer Portfolio\foto1.jpeg" alt="Foto de perfil de Vitor Lima, jovem desenvolvedor com sorriso amigável, cabelos curtos, usando camisa branca e fundo azul claro" class="w-32 h-32 rounded-full mx-auto mb-6 fade-in-up object-cover">
+            <h2 class="text-4xl font-bold mb-4 fade-in-up" style="animation-delay: 0.2s;">Hello, I am Vitor Lima</h2>
+            <p class="text-xl mb-6 max-w-2xl mx-auto fade-in-up" style="animation-delay: 0.4s;">
+                Front-End Developer passionate about creating amazing interfaces and memorable user experiences.
+                Specialist in HTML, CSS, JavaScript, and modern frameworks.
+            </p>
+            <button onclick="scrollToSection('contact')" class="bg-yellow-400 hover:bg-yellow-500 text-blue-900 px-8 py-4 rounded-full font-semibold transition-colors fade-in-up" style="animation-delay: 0.6s;">
+                Let's Talk
+            </button>
+        </div>
+    </section>
+    <section id="skills" class="py-20 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-12 text-gray-800">My Skills</h2>
+            <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <div>
+                    <h3 class="text-2xl font-semibold mb-4 text-blue-600">Tecnologic Front-End</h3>
+                    <div class="space-y-4">
+                        <div class="flex justify-between">
+                            <span>HTML & CSS</span>
+                            <span>90%</span>
+                        </div>
+                        <div class="bg-gray-200 rounded-full h-2">
+                            <div class="bg-blue-500 h-2 rounded-full skill-bar" data-width="90%"></div>
+                        </div>
+                        <div class="flex justify-between">
+                            <span>JavaScript</span>
+                            <span>85%</span>
+                        </div>
+                        <div class="bg-gray-200 rounded-full h-2">
+                            <div class="bg-blue-500 h-2 rounded-full skill-bar" data-width="85%"></div>
+                        </div>
+                        <div class="flex justify-between">
+                            <span>React</span>
+                            <span>80%</span>
+                        </div>
+                        <div class="bg-gray-200 rounded-full h-2">
+                            <div class="bg-blue-500 h-2 rounded-full skill-bar" data-width="80%"></div>
+                        </div>
+                        <div class="flex justify-between">
+                            <span>Tailwind CSS</span>
+                            <span>95%</span>
+                        </div>
+                        <div class="bg-gray-200 rounded-full h-2">
+                            <div class="bg-blue-500 h-2 rounded-full skill-bar" data-width="95%"></div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-2xl font-semibold mb-4 text-green-600">Tools & Others</h3>
+                    <div class="space-y-4">
+                        <div class="flex justify-between">
+                            <span>Git & GitHub</span>
+                            <span>88%</span>
+                        </div>
+                        <div class="bg-gray-200 rounded-full h-2">
+                            <div class="bg-green-500 h-2 rounded-full skill-bar" data-width="88%"></div>
+                        </div>
+                        <div class="flex justify-between">
+                            <span>UI/UX Design</span>
+                            <span>75%</span>
+                        </div>
+                        <div class="bg-gray-200 rounded-full h-2">
+                            <div class="bg-green-500 h-2 rounded-full skill-bar" data-width="75%"></div>
+                        </div>
+                        <div class="flex justify-between">
+                            <span>RESTful APIs</span>
+                            <span>82%</span>
+                        </div>
+                        <div class="bg-gray-200 rounded-full h-2">
+                            <div class="bg-green-500 h-2 rounded-full skill-bar" data-width="82%"></div>
+                        </div>
+                        <div class="flex justify-between">
+                            <span>Node.js</span>
+                            <span>70%</span>
+                        </div>
+                        <div class="bg-gray-200 rounded-full h-2">
+                            <div class="bg-green-500 h-2 rounded-full skill-bar" data-width="70%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="projects" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-12 text-gray-800">My Projects</h2>
+            <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <div class="project-card bg-gray-100 rounded-lg p-6 shadow-lg">
+                    <img src="C:\Users\vitor\Desktop\Projetos\Custumer Portfolio\foto2.png" alt="Captura de tela do projeto Instagram Clone: interface com header azul, histórias coloridas, posts com imagens de praia e montanhas, sidebar com perfil e sugestões" class="w-full h-40 object-cover rounded mb-4">
+                    <h3 class="text-xl font-semibold mb-2">Instagram Clone</h3>
+                    <p class="text-gray-600 text-sm mb-4">Clone of the Instagram interface with responsive layout, interactions, and modern design.</p>
+                    <div class="flex justify-between">
+                        <a href="https://github.com/VitorLimaM/Website/blob/main/Clone%20Instagram/index.html" class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded transition-colors">See Demo</a>
+                        <a href="https://github.com/VitorLimaM/Website" class="bg-gray-700 hover:bg-gray-800 text-white px-4 py-2 rounded transition-colors">Code</a>
+                    </div>
+                </div>
+                <div class="project-card bg-gray-100 rounded-lg p-6 shadow-lg">
+                    <img src="C:\Users\vitor\Desktop\Projetos\Custumer Portfolio\foto3.png" alt="Captura de tela do jogo da Velha: grid 3x3 com X e O, botão de reiniciar, placar indicando vitórias e empates" class="w-full h-40 object-cover rounded mb-4">
+                    <h3 class="text-xl font-semibold mb-2">Tic Tac Toe Game</h3>
+                    <p class="text-gray-600 text-sm mb-4">Classic tic-tac-toe game with an interactive interface and smooth animations.</p>
+                    <div class="flex justify-between">
+                        <a href="#" class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded transition-colors">See Demo</a>
+                        <a href="https://github.com/VitorLimaM/Website" class="bg-gray-700 hover:bg-gray-800 text-white px-4 py-2 rounded transition-colors">Code</a>
+                    </div>
+                </div>
+                <div class="project-card bg-gray-100 rounded-lg p-6 shadow-lg">
+                    <img src="C:\Users\vitor\Desktop\Projetos\Custumer Portfolio\foto4.webp" alt="Captura de tela do Weather Dashboard: cards com temperatura, umidade, vento, localização São Paulo, fundo gradiente azul" class="w-full h-40 object-cover rounded mb-4">
+                    <h3 class="text-xl font-semibold mb-2">Dashboard weather</h3>
+                    <p class="text-gray-600 text-sm mb-4">Responsive dashboard consuming a public weather API with detailed forecasts.</p>
+                    <div class="flex justify-between">
+                        <a href="#" class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded transition-colors">See Demo</a>
+                        <a href="https://github.com/VitorLimaM/Website" class="bg-gray-700 hover:bg-gray-800 text-white px-4 py-2 rounded transition-colors">Code</a>
+                    </div>
+                </div>
+                <div class="project-card bg-gray-100 rounded-lg p-6 shadow-lg">
+                    <img src="https://placehold.co/300x200/e0e0e0/000000.png" alt="Captura de tela do Todo App: lista de tarefas com checkboxes, botões adicionar, filtros ativo/concluído, estatísticas da lista" class="w-full h-40 object-cover rounded mb-4">
+                    <h3 class="text-xl font-semibold mb-2">App for To-Do</h3>
+                    <p class="text-gray-600 text-sm mb-4">Advanced task manager with filtering, animations, and local data persistence.</p>
+                    <div class="flex justify-between">
+                        <a href="#" class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded transition-colors">See Demo</a>
+                        <a href="https://github.com/VitorLimaM/Website" class="bg-gray-700 hover:bg-gray-800 text-white px-4 py-2 rounded transition-colors">Code</a>
+                    </div>
+                </div>
+                <div class="project-card bg-gray-100 rounded-lg p-6 shadow-lg">
+                    <img src="https://placehold.co/300x200/e0e0e0/000000.png" alt="Captura de tela do site ProdutivoPro: seções hero com gradiente roxo-agroa, cards de features com animações smooth" class="w-full h-40 object-cover rounded mb-4">
+                    <h3 class="text-xl font-semibold mb-2">Landing Page</h3>
+                    <p class="text-gray-600 text-sm mb-4">odern landing page featuring advanced animations, parallax scrolling, and CSS effects.</p>
+                    <div class="flex justify-between">
+                        <a href="#" class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded transition-colors">See Demo</a>
+                        <a href="https://github.com/VitorLimaM/Website" class="bg-gray-700 hover:bg-gray-800 text-white px-4 py-2 rounded transition-colors">Code</a>
+                    </div>
+                </div>
+                <div class="project-card bg-gray-100 rounded-lg p-6 shadow-lg">
+                    <img src="https://placehold.co/300x200/e0e0e0/000000.png" alt="Mockup do projeto 2: To-Do List com interface de lista simples, botão adicionar tarefa, checkbox para marcar como concluída" class="w-full h-40 object-cover rounded mb-4">
+                    <h3 class="text-xl font-semibold mb-2">To-Do List Simples</h3>
+                    <p class="text-gray-600 text-sm mb-4">Basic to-do list with localStorage persistence.</p>
+                    <div class="flex justify-between">
+                        <a href="#" class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded transition-colors">See Demo</a>
+                        <a href="https://github.com/VitorLimaM/Website" class="bg-gray-700 hover:bg-gray-800 text-white px-4 py-2 rounded transition-colors">Code</a>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-8">
+                <a href="https://github.com/VitorLimaM" target="_blank" class="bg-gray-800 hover:bg-gray-900 text-white px-6 py-3 rounded transition-colors">
+                    <i class="fab fa-github mr-2"></i>See more on GitHub
+                </a>
+            </div>
+        </div>
+    </section>
+    <section id="contact" class="py-20 bg-gray-800 text-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center mb-12">Let's go work togheter</h2>
+            <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <div>
+                    <h3 class="text-2xl font-semibold mb-4">Get in Touch</h3>
+                    <p class="mb-6">Looking for job opportunities or just want to say hi? Send me a message!</p>
+                    <div class="space-y-4">
+                        <div class="flex items-center">
+                            <i class="fas fa-envelope contact-icon text-xl mr-4"></i>
+                            <span>vitorfarialima@gmail.com</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-phone contact-icon text-xl mr-4"></i>
+                            <span>+1 (236) 236 7005</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-map-marker-alt contact-icon text-xl mr-4"></i>
+                            <span>Vancouver, BC</span>
+                        </div>
+                    </div>
+                    <div class="flex space-x-6 mt-6">
+                         <a href="https://github.com/VitorLimaM" target="_blank" class="contact-icon text-2xl">
+                         <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/vitor-lima-8b0042293" target="_blank" class="contact-icon text-2xl">
+                        <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="#" class="contact-icon text-2xl">
+                        <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <form class="space-y-4">
+                        <div>
+                            <label for="name" class="block mb-2">Name</label>
+                            <input type="text" id="name" class="w-full px-4 py-2 rounded bg-gray-700 border border-gray-600 focus:outline-none focus:border-blue-500">
+                        </div>
+                        <div>
+                            <label for="email" class="block mb-2">E-mail</label>
+                            <input type="email" id="email" class="w-full px-4 py-2 rounded bg-gray-700 border border-gray-600 focus:outline-none focus:border-blue-500">
+                        </div>
+                        <div>
+                            <label for="message" class="block mb-2">Mensage</label>
+                            <textarea id="message" rows="4" class="w-full px-4 py-2 rounded bg-gray-700 border border-gray-600 focus:outline-none focus:border-blue-500"></textarea>
+                        </div>
+                        <button type="submit" class="bg-blue-500 hover:bg-blue-600 px-6 py-2 rounded font-semibold transition-colors">Send Mensage</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="bg-gray-900 text-white py-8">
+        <div class="container mx-auto px-4 text-center">
+            <p>&copy; 2025 Vitor Lima. Todos os direitos reservados.</p>
+            <p class="mt-2">Made using HTML, CSS, and JavaScript.</p>
+        </div>
+    </footer>
+    <script>
+        function scrollToSection(sectionId) {
+            const section = document.getElementById(sectionId);
+            section.scrollIntoView({ behavior: 'smooth' });
+        }
+        function animateSkills() {
+            const skillBars = document.querySelectorAll('.skill-bar');
+            skillBars.forEach(bar => {
+                const percent = bar.getAttribute('data-width');
+                bar.style.setProperty('--width', percent);
+                if (bar.classList.contains('animate')) return;
+                if (bar.offsetTop < window.scrollY + window.innerHeight - 100) {
+                    bar.classList.add('animate');
+                }
+            });
+        }
+        window.addEventListener('scroll', animateSkills);
+        window.addEventListener('load', animateSkills);
+        document.querySelector('form').addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert('Message sent! Thank you for reaching out.');
+            document.querySelectorAll('#name, #email, #message').forEach(input => input.value = '');
+        });
+        const currentYear = new Date().getFullYear();
+        document.querySelector('footer p:first-child').innerText = `© ${currentYear} Vitor Lima. All rights reserved.`;
+    </script>
+</body>
+</html>
+</content>
+</create_file>
